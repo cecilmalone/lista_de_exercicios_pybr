@@ -11,47 +11,48 @@ litros, que custam R$ 80,00 ou em galões de 3,6 litros, que custam R$ 25,00.
         latas cheias.
 """
 
+import math
+
 metros_quadrados = int(input('Informe o tamanho em metros quadrados da área a ser pintada: '))
+metros_lata = metros_quadrados / 6
 
-litro_lata = 18
-valor_lata = 80
-lata_metro_quadrado = 18 / 6
+if (metros_lata <= 0):
+    metros_lata = 1
 
-litro_galao = 3.6
-valor_galao = 25
-galao_metro_quadrado = 3.6 / 6
+quantidade_latas_18 = math.floor(metros_lata / 18 + (18 * 0.10))
+quantidade_galoes_36 = math.floor(metros_lata / 3.6 + (3.6 * 0.10))
+qtd_latas = metros_lata / 18
+resto = metros_lata % 18
 
-quantidade_latas = metros_quadrados / lata_metro_quadrado
-quantidade_galoes = metros_quadrados / galao_metro_quadrado
-
-if quantidade_latas <= 1:
-    quantidade_latas = 1
-    print('Comprando apenas latas de 18 litros')
-    print('Quantidade de latas: %d' % quantidade_latas)
-    print('Preço total: %.2f' % valor_lata)
+if (resto > 0 and resto <= 3.6):
+    qtd_galoes = 1
+elif (resto == 0):
+    qtd_galoes = 0
 else:
-    total = quantidade_latas * valor_lata
-    print('Comprando apenas latas de 18 litros')
-    print('Quantidade de latas: %d' % quantidade_latas)
-    print('Preço total: %.2f' % total)
+    qtd_galoes = math.floor(resto / 3.6 + (3.6 * 0.10))
 
-if quantidade_galoes <= 1:
-    quantidade_galoes = 1
-    print('Comprando apenas galões de 3,6 litros')
-    print('Quantidade de latas: %d' % quantidade_galoes)
-    print('Preço total: %.2f' % valor_galao)
-else:
-    total = quantidade_galoes * valor_galao
-    print('Comprando apenas galões de 3,6 litros')
-    print('Quantidade de latas: %d' % quantidade_galoes)
-    print('Preço total: %.2f' % total)
+if (quantidade_latas_18 <= 0 or quantidade_galoes_36 <= 0 or qtd_galoes < 0):
+    quantidade_latas_18 = 1
+    quantidade_galoes_36 = 1
+    qtd_galoes = 1
 
 
-a1 = int(litrosf/18)
-        a2 = litrosf%18
-        a3 = math.ceil(a2/3.6)
-        a4 = ((a1*80)+(a3*25))
-        print("Você de %d litros de tinta, %d latas, %d galões e pagará R$ %d" % (litrosf,a1,a3,a4))
-quantidade_ideal = 0
+preco_latas_18 = quantidade_latas_18 * 80
+preco_galoes_36 = quantidade_galoes_36 * 25
+preco_latas = qtd_latas * 80
+preco_galoes = qtd_galoes * 25
 
-
+preco_otimo = preco_latas + preco_galoes
+ 
+print('Comprando apenas latas de 18 litros')
+print('Quantidade de latas: %d' % quantidade_latas_18)
+print('Preço total: %.2f' % preco_latas_18)
+print()
+print('Comprando apenas galões de 3,6 litros')
+print('Quantidade de galões: %d' % quantidade_galoes_36)
+print('Preço total: %.2f' % preco_galoes_36)
+print()
+print('Misturando latas e galões, de forma que o preço seja o menor')
+print('Quantidade de latas: %d' % qtd_latas)
+print('Quantidade de galões: %d' % qtd_galoes)
+print('Preço total: %.2f' % preco_otimo)
