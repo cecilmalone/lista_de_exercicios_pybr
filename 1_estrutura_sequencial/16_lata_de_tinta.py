@@ -6,14 +6,20 @@ litros, que custam R$ 80,00. Informe ao usuário a quantidades de latas de tinta
 a serem compradas e o preço total.
 """
 
-metros_quadrados = int(input())
-valor_lata = 80
-lata_metro_quadrado = 18 / 3
+import math
 
-quantidade_latas = metros_quadrados / lata_metro_quadrado
+metros_quadrados = int(input('Informe o tamanho em metros quadrados da área a ser pintada: '))
+litros = metros_quadrados / 3
 
-if quantidade_latas < 1:
-    print(valor_lata)
+valor_lata = 80.0
+capacidade_litros = 18
+
+quantidade_latas = litros / capacidade_litros
+total = math.floor(quantidade_latas) * valor_lata
+
+if quantidade_latas <= 1:
+    print('Quantidade de latas: 1')
+    print('Preço total: %.2f' % valor_lata)
 else:
-    total = quantidade_latas * valor_lata
-    print(total)
+    print('Quantidade de latas: %d' % quantidade_latas)
+    print('Preço total: %.2f' % total)

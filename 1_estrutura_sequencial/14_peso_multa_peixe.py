@@ -9,12 +9,12 @@ da multa que João deverá pagar. Imprima os dados do programa com as mensagens 
 """
 
 valor_multa = 4.00
-peso = float(input())
+peso = float(input('Informe o peso dos peixes: '))
 
 if peso > 50:
     quantidade_excesso = peso - 50
-    multa = quantidade_excesso * multa
-    print(quantidade_excesso)
-    print(multa)
+    multa = quantidade_excesso * valor_multa
+    print('A quantidade de excesso de peixe foi de: {} kg'.format(quantidade_excesso))
+    print('A multa a ser paga pelo excesso de peixe é de: R$ {:.2f}'.format(multa))
 else:
-    print(peso)
+    print('A quantidade de peixe foi de: {} kg'.format(peso))
