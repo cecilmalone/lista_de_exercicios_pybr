@@ -9,3 +9,33 @@ quantidade de centenas, dezenas e unidades do mesmo.
     21, 11, 1, 7 e 16
 """
 
+numero = float(input("Informe um número: "))
+
+while numero >= 1000:
+    numero = float(input("Informe um número: "))
+
+texto = str(numero)
+
+if len(numero) == 3:
+    if int(texto[0]) > 1:
+        centena = "{} centenas,".format(texto[0])
+    else:
+        centena = "{} centena,".format(texto[0])
+elif len(numero) == 2:
+    if int(texto[1]) > 1:
+        dezena = "{} dezenas,".format(texto[1])
+    else:
+        dezena = "{} dezena,".format(texto[1])
+else:
+    if int(texto[2]) > 1:
+        unidade = "{} unidades".format(texto[2])
+    else:
+        unidade = "{} unidade".format(texto[2])
+
+if len(numero) == 3:
+    print(centena + dezena + unidade)
+elif len(numero) == 2:
+    print(dezena + unidade)
+else:
+    print(unidade)
+    
