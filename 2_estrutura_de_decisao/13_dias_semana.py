@@ -5,19 +5,19 @@
 
 dia_semana = int(input("Digite o número da semana: "))
 
-if dia_semana = 1:
+if dia_semana == 1:
     print("Domingo")
-elif dia_semana = 2:
+elif dia_semana == 2:
     print("Segunda")
-elif dia_semana = 3:
+elif dia_semana == 3:
     print("Terça")
-elif dia_semana = 4:
+elif dia_semana == 4:
     print("Quarta")
-elif dia_semana = 5:
+elif dia_semana == 5:
     print("Quinta")
-elif dia_semana = 6:
+elif dia_semana == 6:
     print("Sexta")
-elif dia_semana = 7:
+elif dia_semana == 7:
     print("Sábado")
 else:
     print("Valor inválido")

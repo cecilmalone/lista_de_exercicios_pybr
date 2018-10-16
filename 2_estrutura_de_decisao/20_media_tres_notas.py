@@ -15,8 +15,8 @@ nota_3 = float(input("Informe uma nota: "))
 media = (nota_1 + nota_2 + nota_3) / 3
 
 if (media >= 0) and (media < 7):
-    print("Reprovado, com a média {}".format(media))
+    print("Reprovado, com a média {:.1f}".format(media))
 elif (media >= 7) and (media < 10):
-    print("Aprovado, com a média {}".format(media))
+    print("Aprovado, com a média {:.1f}".format(media))
 else:
-    print("Aprovado com Distinção, com a média {}".format(media))
+    print("Aprovado com Distinção, com a média {:.1f}".format(media))

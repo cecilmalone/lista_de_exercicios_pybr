@@ -18,24 +18,28 @@ tipo_carne = input("Qual o tipo da carne: ")
 quilos = float(input("Informe a quantidade (em Kg) de Carne: "))
 forma_pagamento = input("Qual a forma de pagamento: ")
 
-if morango_quilos <= 5:
-    valor_morango = morango_quilos * 2.50
-else:
-    valor_morango = morango_quilos * 2.20
+if tipo_carne == "File Duplo":
+    if quilos <= 5:
+        preco_total = quilos * 4.90
+    else:
+        preco_total = quilos * 5.80
+elif tipo_carne == "Alcatra":
+    if quilos <= 5:
+        preco_total = quilos * 5.90
+    else:
+        preco_total = quilos * 6.80
+elif tipo_carne == "Picanha":
+    if quilos <= 5:
+        preco_total = quilos * 6.90
+    else:
+        preco_total = quilos * 7.80
 
-if macas_quilos <= 5:
-    valor_maca = macas_quilos * 1.80
-else:
-    valor_maca = macas_quilos * 1.50
-
-valor_compra = valor_morango + valor_maca
-
-if (morango_quilos + macas_quilos) > 8 or valor_compra > 25:
-    valor_compra = valor_compra - (valor_compra * 0.10)
+if forma_pagamento == "Cartão Tabajara":
+    desconto = preco_total * 0.05
 
 print("Tipo da Carne: {}".format(tipo_carne))
 print("Quantidade de Carne (Kg): {}".format(quilos))
-print("Preço Total: R$ {}".format(teste))
-print("Forma de Pagamento: R$ {}".format(forma_pagamento))
-print("Valor do Desconto: R$ {:.2f}".format(valor_compra))
-print("Valor a pagar: R$ {:.2f}".format(valor_compra))
+print("Preço Total: R$ {}".format(preco_total))
+print("Forma de Pagamento: {}".format(forma_pagamento))
+print("Valor do Desconto: R$ {:.2f}".format(desconto))
+print("Valor a pagar: R$ {:.2f}".format(preco_total - desconto))

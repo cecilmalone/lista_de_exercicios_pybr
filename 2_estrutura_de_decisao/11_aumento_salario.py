@@ -20,16 +20,16 @@ salario_atual = float(input("Informe o salário atual: "))
 
 if salario_atual <= 280:
     percentual = 20
-    novo_salario = salario_atual * 0.20
+    novo_salario = salario_atual + (salario_atual * 0.20)
 elif (salario_atual > 280) and (salario_atual <= 700):
     percentual = 15
-    novo_salario = salario_atual * 0.15
+    novo_salario = salario_atual + (salario_atual * 0.15)
 elif (salario_atual > 700) and (salario_atual <= 1500):
     percentual = 10
-    novo_salario = salario_atual * 0.10
+    novo_salario = salario_atual + (salario_atual * 0.10)
 else:
     percentual = 5
-    novo_salario = salario_atual * 0.05
+    novo_salario = salario_atual + (salario_atual * 0.05)
 
 print("Salário antes do reajuste: R$ {:.2f}".format(salario_atual))
 print("Percentual de aumento aplicado: {}%".format(percentual))

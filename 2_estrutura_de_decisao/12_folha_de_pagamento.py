@@ -25,26 +25,27 @@ qtd_horas_mes = float(input("Informe a quantidad de horas trabalhadas no mês: "
 salario_bruto = valor_hora * qtd_horas_mes
 
 if salario_bruto <= 900:
+    ir = 'isento'
     irpf = 0
 elif (salario_bruto > 900) and (salario_bruto <= 1500):
-    ir = 0.05
-    irpf = salario_bruto * ir
+    ir = '5'
+    irpf = salario_bruto * 0.05
 elif (salario_bruto > 1500) and (salario_bruto <= 2500):
-    ir = 0.10
-    irpf = salario_bruto * ir
+    ir = '10'
+    irpf = salario_bruto * 0.10
 else:
-    ir = 0.20
-    irpf = salario_bruto * ir
+    ir = '20'
+    irpf = salario_bruto * 0.20
 
 fgts = salario_bruto * 0.11
-sindicato = salario_bruto 0.03
+sindicato = salario_bruto * 0.03
 inss = salario_bruto * 0.10
 
 descontos = irpf + inss + sindicato
 salario_liquido = salario_bruto - descontos
 
 print("Salário Bruto: ({} * {})        : R$ {:.2f}".format(valor_hora, qtd_horas_mes, salario_bruto))
-print("(-) IR ({:.f}}%%)                  : R$ {:.2f}".format(ir, irpf))
+print("(-) IR ({}%)                    : R$ {:.2f}".format(ir, irpf))
 print("(-) INSS ( 10%)                 : R$  {:.2f}".format(inss))
 print("FGTS (11%)                      : R$  {:.2f}".format(fgts))
 print("Total de descontos              : R$  {:.2f}".format(descontos))

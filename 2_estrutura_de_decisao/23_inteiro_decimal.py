@@ -10,4 +10,4 @@ numero = float(input("Informe um número: "))
 if round(numero) != numero:
     print("O número {} é decimal.".format(numero))
 else:
-    print("O número {} é inteiro.".format(numero))
+    print("O número {:.0f} é inteiro.".format(numero))

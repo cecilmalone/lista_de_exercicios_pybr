@@ -16,12 +16,12 @@ while numero >= 1000:
 
 texto = str(numero)
 
-if len(numero) == 3:
+if len(texto) == 3:
     if int(texto[0]) > 1:
         centena = "{} centenas,".format(texto[0])
     else:
         centena = "{} centena,".format(texto[0])
-elif len(numero) == 2:
+elif len(texto) == 2:
     if int(texto[1]) > 1:
         dezena = "{} dezenas,".format(texto[1])
     else:
@@ -32,9 +32,9 @@ else:
     else:
         unidade = "{} unidade".format(texto[2])
 
-if len(numero) == 3:
+if len(texto) == 3:
     print(centena + dezena + unidade)
-elif len(numero) == 2:
+elif len(texto) == 2:
     print(dezena + unidade)
 else:
     print(unidade)
