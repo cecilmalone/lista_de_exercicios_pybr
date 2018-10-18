@@ -6,15 +6,15 @@ mesma é uma data válida.
 data = input("Informe uma data no formato dd/mm/aaaa: ")
 
 
-if (int(data[3:4]) == 2) and (int(data[0:1]) > 29) and ((int(data[6:9]) % 4 == 0) and (int(data[6:9]) % 100 != 0) and (int(data[6:9]) % 400 != 0)):
+if (int(data[3:5]) == 2) and (int(data[0:2]) > 29) and ((int(data[6:10]) % 4 == 0) and (int(data[6:10]) % 100 != 0) and (int(data[6:10]) % 400 != 0)):
     print("Data inválida")
-elif (int(data[3:4]) == 2) and (int(data[0:1]) > 28):
+elif (int(data[3:5]) == 2) and (int(data[0:2]) > 28):
     print("Data inválida")
-elif (int(data[0:1]) < 1) and (int(data[0:1]) > 31):
+elif (int(data[0:2]) < 1) and (int(data[0:2]) > 31):
     print("Data inválida")
-elif (int(data[3:4]) < 1) and (int(data[:1]) > 12):
+elif (int(data[3:5]) < 1) and (int(data[:2]) > 12):
     print("Data inválida")
-elif int(data[6:9]) < 1900:
+elif int(data[6:10]) < 1900:
     print("Data inválida")
 else:
     print("Data válida")
