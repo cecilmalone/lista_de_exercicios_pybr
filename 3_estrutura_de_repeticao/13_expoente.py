@@ -4,10 +4,12 @@ primeiro número elevado ao segundo número. Não utilize a função de potênci
 linguagem.
 """
 
-base = float(input("Informe a base: "))
-expoente = float(input("Informe o expoente: "))
+base = int(input("Informe a base: "))
+expoente = int(input("Informe o expoente: "))
+
+resultado = 1
 
 for _ in range(expoente):
     resultado *= base
 
-print("{} elevado a {} é igual a {}".format(base, expoente, resultado)
+print("{} elevado a {} é igual a {}".format(base, expoente, resultado))

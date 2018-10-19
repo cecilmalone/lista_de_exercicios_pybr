@@ -13,5 +13,5 @@ tabuada = int(input("De qual número deseja ver a tabuada: "))
 
 print("Tabuada de {}:".format(tabuada))
 
-for x in range(1, 10):
+for x in range(1, 11):
     print("{} X {} = {}".format(tabuada, x, tabuada * x))

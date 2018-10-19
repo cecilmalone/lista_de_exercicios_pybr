@@ -5,12 +5,12 @@ Faça um programa que gere a série até que o valor seja maior que 500.
 
 t1 = 0
 t2 = 1
+t3 = 0
 
-if n == 1:
-    print("{}".format(t1, t2))
+print("{}".format(t1, t2), end=' ')
 
 while t3 <= 500:
     t3 = t1 + t2
-    print("{}".format(t3), end='')
+    print("{}".format(t3), end=' ')
     t1 = t2
     t2 = t3

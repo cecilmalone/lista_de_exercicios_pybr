@@ -10,7 +10,7 @@ numero = int(input("Informe um número: "))
 divisiveis = [1]
 divisoes = 0
 
-for n in range(numero):
+for n in range(1, numero):
     if (n % n == 0) and (n % 1 == 0):
         divisiveis.append(n)
         divisoes += 1

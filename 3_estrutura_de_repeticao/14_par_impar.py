@@ -5,7 +5,7 @@
 par = 0
 impar = 0
 
-for _ in range(1, 10):
+for _ in range(10):
     numero = int(input("Informe um número: "))
 
     if numero % 2 == 0:

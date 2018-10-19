@@ -5,9 +5,10 @@
 n1 = int(input("Informe um número: "))
 n2 = int(input("Informe outro número: "))
 
+total = 0
+
 for x in range(n1+1, n2-1):
-    total = 0
     total += x
     print(x)
 
-print(total)
+print("Total:", total)

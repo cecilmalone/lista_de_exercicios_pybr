@@ -5,12 +5,15 @@
 numeros = []
 
 numeros = input("Informe um conjunto de números: ").split()
+numeros = [int(x) for x in numeros]
 
 maior = max(numeros)
 menor = min(numeros)
 
+soma = 0
+
 for x in numeros:
-    soma =+ x
+    soma += x
 
 print("Maior valor:", maior)
 print("Menor valor:", menor)
