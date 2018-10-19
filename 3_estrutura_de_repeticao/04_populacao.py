@@ -17,4 +17,5 @@ while pop_a <= pop_b:
     pop_b += (pop_b * tax_b)
     anos += 1
 
-print("A população A ultrapassará ou igualará a população B em {} anos.".format(anos))
+print("A população A ultrapassará ou igualará a população B em {} anos."
+      .format(anos))

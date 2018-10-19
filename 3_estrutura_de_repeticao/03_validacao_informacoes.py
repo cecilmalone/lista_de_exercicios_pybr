@@ -17,7 +17,7 @@ salario = float(input("Informe o salário: "))
 while salario <= 0: 
     salario = float(input("Informe o salário: "))
 sexo = input("Informe o sexo: ")
-while sexo == 'f' or sexo == 'm': 
+while sexo != 'f' and sexo != 'm':
     sexo = input("Informe o sexo: ")
 estado_civil = input("Informe o estado civil: ")
 while estado_civil not in ('s', 'c', 'v', 'd'): 
