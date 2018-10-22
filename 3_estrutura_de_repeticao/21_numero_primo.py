@@ -5,8 +5,13 @@ por 1.
 """
 
 numero = int(input("Informe um número: "))
+tot = 0
 
-if (numero % numero == 0) and (numero % 1 == 0):
+for c in range(1, numero + 1):
+    if numero % c == 0:
+        tot += 1
+
+if tot == 2:
     print("O número {} é primo.".format(numero))
 else:
     print("O número {} não é primo.".format(numero))

@@ -12,16 +12,16 @@ cand_2 = 0
 cand_3 = 0
 
 for x in range(total_eleitores):
-    voto = int(input("Eleitor nº {}, informe o seu voto: ".format(x)))
+    voto = int(input("Eleitor nº {}, informe o seu voto: ".format(x+1)))
     votos.append(voto)
 
 for item in votos:
     if item == 1:
         cand_1 += 1
     elif item == 2:
-        cand_2 += 2
+        cand_2 += 1
     elif item == 3:
-        cand_3
+        cand_3 += 1
 
 print("O candidato nº 1 teve {} voto(s).".format(cand_1))
 print("O candidato nº 2 teve {} voto(s).".format(cand_2))

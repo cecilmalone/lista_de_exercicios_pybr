@@ -6,10 +6,10 @@ média calculada.
 """
 
 idades = []
-idades.append(int(input("Informe a idade: "))
+idades.append(int(input("Informe a idade: ")))
 
-while idade <> 0:
-    idades.append(int(input("Informe a idade: "))
+while 0 not in idades:
+    idades.append(int(input("Informe a idade: ")))
 
 idades = [int(x) for x in idades]
 

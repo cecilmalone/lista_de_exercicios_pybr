@@ -5,7 +5,7 @@
 numeros = []
 soma = 0
 
-numeros = input("Informe as notas: ")
+numeros = input("Informe as notas: ").split()
 numeros = [int(x) for x in numeros]
 
 for x in numeros:
