@@ -7,27 +7,18 @@ funcionamento, o estilo e o número de testes (divisões) executados.
 
 numero = int(input("Informe um número: "))
 
-divisiveis = [1]
-divisoes = 0
-
-for n in range(1, numero):
-    if (n % n == 0) and (n % 1 == 0):
-        divisiveis.append(n)
-        divisoes += 1
-
-print("O número {} possui os seguintes divisiveis: {}".format(numero, divisiveis))
-print("O número {} possui {} divisões".format(divisoes))
-
-
-numero = int(input("Informe um número: "))
 tot = 0
+div = 0
 
-for c in range(1, numero + 1):
-    if numero % c == 0:
-        tot += 1
+for j in range(1, numero + 1):
+    tot = 0
+    div = 0
+    for c in range(1, numero + 1):
+        if j % c == 0:
+            tot += 1
+            if tot <= 2:
+                div += 1
 
-if tot == 2:
-    print("O número {} é primo.".format(numero))
-else:
-    print("O número {} não é primo.".format(numero))
-
+    if tot == 2:
+        print("O número {} é primo e teve {} divisões até ser encontrado."
+              .format(j, div))
