@@ -5,15 +5,19 @@ usuário. Ex.: 5!=5.4.3.2.1=120. A saída deve ser conforme o exemplo abaixo:
     5! =  5 . 4 . 3 . 2 . 1 = 120
 """
 
-numeros = []
-resultado = 1
-
 numero = int(input("Informe um número: "))
 
-print("Fatorial de: {}".format(numero))
-for x in range(1, numero + 1):
-    numeros.append(x)
-    resultado *= x
+fatorial = 1
 
-numeros = [int()]
-print("{}! = {} = {}".format(numero, numeros[::-1], resultado))
+print("Fatorial de: {}".format(numero))
+print("{}! = ".format(numero), end='')
+
+while numero > 0:
+    fatorial = fatorial * numero
+    if numero == 1:
+        print(numero, end='')
+    else:
+        print(numero, end=' . ')
+    numero -= 1
+
+print(" = {}".format(fatorial))
