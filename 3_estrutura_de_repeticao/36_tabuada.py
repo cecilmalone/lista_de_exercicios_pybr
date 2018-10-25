@@ -16,3 +16,16 @@ usuário, conforme exemplo abaixo:
     inicial.
 """
 
+tabuada = int(input("De qual número deseja ver a tabuada: "))
+inicio = int(input("Começar por: "))
+fim = int(input("Terminar em: "))
+
+while fim < inicio:
+    inicio = int(input("Começar por: "))
+    fim = int(input("Terminar em: "))
+
+print("Vou montar a tabuada de {} começando em {} e terminando em {}:".format(
+    tabuada, inicio, fim))
+
+for x in range(inicio, fim + 1):
+    print("{} X {} = {}".format(tabuada, x, tabuada * x))
