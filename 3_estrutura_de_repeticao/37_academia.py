@@ -17,7 +17,8 @@ if codigo != 0:
     altura = float(input("Informe a altura: "))
     peso = float(input("Informe o peso: "))
 
-    clientes[codigo] = {peso, altura}
+    clientes[codigo]['peso'] = peso
+    clientes[codigo]['altura'] = altura
 
     while 0 not in clientes:
         codigo = int(input("Informe o código: "))
@@ -25,6 +26,10 @@ if codigo != 0:
             altura = float(input("Informe a altura: "))
             peso = float(input("Informe o peso: "))
 
-            clientes[codigo] = {peso, altura}
+            clientes[codigo]['peso'] = peso
+            clientes[codigo]['altura'] = altura
 
 print(clientes)
+
+print (my_dict["my_key"]["key_1"]) // This will print value_1
+print (my_dict["my_key"]["key_2"]) // This will print value_2
