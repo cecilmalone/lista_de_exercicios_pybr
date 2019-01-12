@@ -22,3 +22,7 @@ while count <= 10:
 for x in range(len(vetor_a):
     vetor_c.append(vetor_a[x])
 	vetor_c.append(vetor_b[x])
+	
+print(vetor_a)
+print(vetor_b)
+print(vetor_c)
